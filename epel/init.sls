@@ -16,7 +16,7 @@
   } %}
 {% elif ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 7 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'][0] == '7' ) %}
   {% set pkg = {
-    'key': 'https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7',
+    'key': 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7',
     'key_hash': 'md5=58fa8ae27c89f37b08429f04fd4a88cc',
     'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-' ~ epel_release|default('7-11', true) ~ '.noarch.rpm',
   } %}
